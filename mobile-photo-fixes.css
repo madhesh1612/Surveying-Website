@@ -1,0 +1,65 @@
+/* ============================================
+   MOBILE PHOTO ZOOM FIXES
+   Ensure photos display at normal size on mobile
+   ============================================ */
+
+/* Gallery Photos - Mobile Fix */
+@media (max-width: 768px) {
+    .aspect-[4\\/3] img,
+    .aspect-\\[4\\/3\\] img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transform: none !important;
+        scale: 1 !important;
+    }
+    
+    /* Remove shadow effects that might cause zoom appearance */
+    .aspect-[4\\/3] img,
+    .aspect-\\[4\\/3\\] img {
+        box-shadow: none !important;
+        filter: none !important;
+    }
+    
+    /* Projects photos */
+    .h-48 img,
+    .h-48.sm\\:h-48 img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transform: none !important;
+        scale: 1 !important;
+    }
+    
+    /* Remove any hover effects on mobile */
+    img {
+        transition: none !important;
+    }
+    
+    img:hover {
+        transform: none !important;
+        scale: 1 !important;
+    }
+    
+    /* Fix any motion div scaling */
+    .motion-div img,
+    [data-motion] img {
+        transform: none !important;
+        scale: 1 !important;
+    }
+}
+
+/* Extra Small Mobile - 480px and below */
+@media (max-width: 480px) {
+    .aspect-[4\\/3] img,
+    .aspect-\\[4\\/3\\] img,
+    .h-48 img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transform: none !important;
+        scale: 1 !important;
+        box-shadow: none !important;
+        filter: none !important;
+    }
+}
