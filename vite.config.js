@@ -6,5 +6,7 @@ export default defineConfig({
   server: {
     host: true,
     port: 5175
-  }
+  },
+  // Set base path for GitHub Pages (replace with your repo name if different)
+  base: '/survey-website/'
 });
